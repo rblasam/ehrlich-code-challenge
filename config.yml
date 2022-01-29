@@ -1,0 +1,6 @@
+development:
+  password: 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
+  theme_id: "130473591009"
+  store: dev-bonn-store.myshopify.com
+  ignores:
+    - config/settings_data.json

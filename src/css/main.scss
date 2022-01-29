@@ -1,5 +1,13 @@
-$color-black: black;
+// SETTINGS
+@import "settings/global";
+@import "settings/breakpoints";
+@import "settings/colors";
+@import "settings/sizes";
+@import "settings/fonts";
+@import "settings/typography";
 
-.button {
-  background-color: $color-black;
-}
+// Functions/Tools
+@import "tools/functions";
+
+// COMPONENTS
+@import "components/layouts/header";
