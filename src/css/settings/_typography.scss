@@ -1,7 +1,27 @@
+// HEADER
+
+.font-header-menu-desktop {
+  font-family: $font-sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+// BUTTON
+
 .font-button {
   font-family: $font-sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.font-button-wireframe {
+  font-family: $font-sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
 }
 
 // Overlay Text
@@ -18,4 +38,16 @@
   font-weight: 400;
   font-style: normal;
   color: $color-text-secondary;
+}
+
+// FOOTER
+.font-footer-our-shop {
+  font-family: $font-sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  font-style: normal;
+
+  @include mobile {
+    font-size: 24px;
+  }
 }

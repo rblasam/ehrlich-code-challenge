@@ -1,18 +1,23 @@
-// SETTINGS
+// BREAKPOINTS
 @import "settings/breakpoints";
+
+// Functions/Tools
+@import "tools/functions";
+
+// SETTINGS
 @import "settings/colors";
 @import "settings/sizes";
 @import "settings/fonts";
 @import "settings/typography";
 @import "settings/global";
 
-// Functions/Tools
-@import "tools/functions";
+
 
 // COMPONENTS
 @import "components/shared/overlay-text-block";
 @import "components/shared/button";
 @import "components/layouts/header";
+@import "components/layouts/footer";
 @import "components/sections/image";
 
 

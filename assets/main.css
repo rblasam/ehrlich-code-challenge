@@ -13,10 +13,23 @@
 /**
  * Fonts
  */
+.font-header-menu-desktop, .header__nav-list-item-link {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  text-decoration: none; }
+
 .font-button, .button {
   font-family: "Century Gothic", sans-serif;
   font-weight: 400;
   text-transform: uppercase; }
+
+.font-button-wireframe, .button-wireframe {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none; }
 
 .font-overlay-text-style1, .overlay-text-block__text--style1 {
   font-family: "Cormorant Garamond", serif;
@@ -28,7 +41,16 @@
   font-family: "Century Gothic", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #c0ac9b; }
+  color: #b4a89a; }
+
+.font-footer-our-shop, .footer__our-shop-text {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  font-style: normal; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    .font-footer-our-shop, .footer__our-shop-text {
+      font-size: 24px; } }
 
 /*------------------------------------*\
     #GLOBAL
@@ -39,8 +61,15 @@
 /**
  * Main CSS
  */
+body {
+  margin: 0;
+  position: relative; }
+
 main {
-  margin-top: -120px; }
+  margin-top: -110px; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    main {
+      margin-top: -80px; } }
 
 .overlay-text-block {
   position: absolute;
@@ -77,25 +106,42 @@ main {
 .button--style3 {
   text-transform: none; }
 
-body {
-  margin: 0; }
+.button-wireframe {
+  background-color: transparent;
+  border: 1px solid #b4a89a;
+  color: #b4a89a;
+  padding: 8px 32px; }
 
 .header__section {
   position: sticky;
-  top: 0px;
-  max-width: 100vw;
-  z-index: 10; }
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+  max-width: 100%; }
 
 .header {
-  height: 120px;
+  height: 110px;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  padding: 0 40px; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    .header {
+      height: 80px;
+      padding: 0 16px; } }
 
 .header__panel {
   flex: 1;
   display: flex; }
-  .header__panel.header__panel-right {
-    justify-content: flex-end; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    .header__panel {
+      justify-content: space-between;
+      align-items: center; } }
+
+.header__panel--left {
+  flex: 2; }
+
+.header__panel--right {
+  justify-content: flex-end; }
 
 .header__logo {
   display: flex;
@@ -103,10 +149,120 @@ body {
 
 .header__nav-list {
   list-style: none;
-  display: flex; }
+  display: flex;
+  align-items: center; }
 
 .header__nav-list-item {
   padding: 0 16px; }
+
+.header__nav-list-item-link {
+  color: #443636; }
+
+.header__menu span {
+  display: block; }
+  .header__menu span:before {
+    content: "";
+    height: 3px;
+    background-color: #443636;
+    width: 40px;
+    display: block;
+    border-radius: 4px; }
+  .header__menu span:not(:last-of-type) {
+    margin-bottom: 6px; }
+
+.footer {
+  max-width: 100%;
+  width: 100vw; }
+
+.footer__top-layer {
+  background-color: #edd3c0;
+  color: #b4a89a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 150px;
+  height: 150px;
+  padding: 0 40px; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    .footer__top-layer {
+      max-height: 110px; } }
+
+.footer__button-container {
+  flex: 1; }
+
+@media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+  .footer__back-to-top-button {
+    display: none; } }
+
+.footer__round-logo-container {
+  flex: 1; }
+
+.footer__round-logo {
+  height: 60px;
+  width: 60px; }
+  @media screen and (min-width: 960px) and (orientation: landscape), screen and (min-width: 1200px), print {
+    .footer__round-logo {
+      display: block;
+      margin: 0 auto;
+      height: 90px;
+      width: 90px; } }
+
+.footer__our-shop {
+  flex: 1; }
+
+.footer__our-shop-text {
+  color: #443636;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+.footer__arrow {
+  width: 50px;
+  height: auto;
+  margin-left: 16px; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    .footer__arrow {
+      width: 30px; } }
+
+.footer__bottom-layer {
+  background-color: #3d552c;
+  color: #ffffff; }
+
+.footer__nav {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.footer__nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  flex: 1; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    .footer__nav-list {
+      display: block;
+      text-align: center; } }
+  .footer__nav--secondary .footer__nav-list {
+    max-width: 500px; }
+
+.footer__nav-list-item-link {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #ffffff; }
+  .footer__nav--secondary .footer__nav-list-item-link {
+    color: #b4a89a;
+    font-size: 14px; }
+
+.footer__white-logo {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto; }
 
 .image__section {
   position: relative; }

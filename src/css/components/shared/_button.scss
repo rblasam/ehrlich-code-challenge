@@ -19,3 +19,11 @@
   .button--style3 {
     text-transform: none;
   }
+
+  .button-wireframe {
+    @extend .font-button-wireframe;
+    background-color: transparent;
+    border: 1px solid $color-text-secondary;
+    color: $color-text-secondary;
+    padding: $space $space*4;
+  }
