@@ -1,0 +1,44 @@
+@mixin xs-mobile {
+	@media screen and (max-width: $break-point-mobile-xs), print {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (max-width: $break-point-mobile), screen and (max-width: $break-point-tablet) and (orientation: portrait), print {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (max-width: $break-point-tablet) , print {
+		@content;
+	}
+}
+
+@mixin large-tablet-landscape {
+	@media only screen and (max-width: $break-point-large-tablet) and (min-aspect-ratio: #{"40 / 31"}) and (max-aspect-ratio: #{"40 / 29"}) { // and (orientation: landscape){
+		@content;
+	}
+}
+
+@mixin larger-than-xs-mobile {
+	@media screen and (min-width: $break-point-mobile-xs), print {
+		@content;
+	}
+}
+
+@mixin larger-than-mobile {
+	@media screen and (min-width: $break-point-mobile) and (orientation: landscape), screen and (min-width: $break-point-tablet) , print {
+		@content;
+	}
+}
+
+@mixin larger-than-tablet {
+	@media screen and (min-width: $break-point-tablet + 1), print {
+		@content;
+	}
+}
+
+
+

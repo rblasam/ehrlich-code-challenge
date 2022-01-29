@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    #GLOBAL
+\*------------------------------------*/
+/**
+ * Default global spacing units
+ */
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #FONTS
+\*------------------------------------*/
+/**
+ * Fonts
+ */
+body {
+  margin: 0; }
+
+.header {
+  background-color: #edd3c1;
+  height: 120px;
+  display: flex;
+  align-items: center; }
+
+.header__panel {
+  flex: 1;
+  display: flex; }
+  .header__panel.header__panel-right {
+    justify-content: flex-end; }
+
+.header__logo {
+  display: flex;
+  align-items: center; }
+
+.header__nav-list {
+  list-style: none;
+  display: flex; }
+
+.header__nav-list-item {
+  padding: 0 16px; }
