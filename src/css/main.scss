@@ -1,13 +1,20 @@
 // SETTINGS
-@import "settings/global";
 @import "settings/breakpoints";
 @import "settings/colors";
 @import "settings/sizes";
 @import "settings/fonts";
 @import "settings/typography";
+@import "settings/global";
 
 // Functions/Tools
 @import "tools/functions";
 
 // COMPONENTS
+@import "components/shared/overlay-text-block";
+@import "components/shared/button";
 @import "components/layouts/header";
+@import "components/sections/image";
+
+
+// OVERRIDES - Placed always in the bottom - Meant to override styles
+@import "overrides/hide";

@@ -6,3 +6,10 @@
  * Default global spacing units
  */
 $space:  8px !default;
+
+/**
+ * Main CSS
+ */
+main {
+  margin-top: -$height-header;
+}

@@ -1,0 +1,21 @@
+.font-button {
+  font-family: $font-sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+// Overlay Text
+
+.font-overlay-text-style1 {
+  font-family: $font-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: $color-text-primary;
+}
+
+.font-overlay-text-style2 {
+  font-family: $font-sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $color-text-secondary;
+}

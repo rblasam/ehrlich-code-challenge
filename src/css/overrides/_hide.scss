@@ -1,0 +1,27 @@
+.hide{
+  display: none;
+}
+
+.hide--xs-mobile{
+  @include xs-mobile{display:none;}
+}
+
+.hide--mobile{
+  @include mobile{display:none;}
+}
+
+.hide--tablet{
+  @include tablet{display:none; }
+}
+
+.hide--larger-than-xs-mobile{
+  @include larger-than-xs-mobile{ display: none; }
+}
+
+.hide--larger-than-mobile{
+  @include larger-than-mobile{ display: none; }
+}
+
+.hide--larger-than-tablet{
+  @include larger-than-tablet{ display: none; }
+}

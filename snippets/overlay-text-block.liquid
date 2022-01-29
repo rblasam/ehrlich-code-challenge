@@ -1,0 +1,51 @@
+{% assign flex = settings.position | split: "," %}
+
+{% assign hide_css = "" %}
+
+{% if settings.show == 'desktop' %}
+   {% assign hide_css = "hide--mobile" %}
+{% elsif settings.show == 'mobile'  %}
+   {% assign hide_css = "hide--larger-than-mobile" %}
+{% endif %}
+
+<div class="overlay-text-block"
+     style="justify-content:{{ flex.first }};
+           align-items:{{ flex.last }};">
+
+   <div class="overlay-text-block__box"
+        style="text-align: {{ settings.box_text_align }};
+              margin:{{ settings.box_margin-top }}% {{ settings.box_margin-right }}% {{ settings.box_margin-bottom }}% {{ settings.box_margin-left }}%;
+              padding:{{ settings.box_padding-vertical | divided_by: 2.0 }}em {{ settings.box_padding-horizontal | divided_by: 2.0 }}em;">
+
+      {% unless settings.text_level_1_text == blank %}
+         <a class="overlay-text-block__text {{ settings.text_level_1_style }}"
+               {% unless settings.text_level_1_url == blank %} href="{{ settings.text_level_1_url }}" {% endunless %}
+               style="font-size: {{ settings.text_level_1_font_size }};
+                     line-height: {{ settings.text_level_1_line_height }}">
+            {{ settings.text_level_1_text | newline_to_br }}
+         </a>
+      {% endunless %}
+      {% unless settings.text_level_2_text == blank %}
+         <a class="overlay-text-block__text {{ settings.text_level_2_style }}"
+               {% unless settings.text_level_2_url == blank %} href="{{ settings.text_level_2_url }}" {% endunless %}
+               style="font-size: {{ settings.text_level_2_font_size }};
+                     line-height: {{ settings.text_level_2_line_height }}">
+            {{ settings.text_level_2_text | newline_to_br }}
+         </a>
+      {% endunless %}
+      {% unless settings.text_level_3_text == blank %}
+         <a class="overlay-text-block__text {{ settings.text_level_3_style }}"
+               {% unless settings.text_level_3_url == blank %} href="{{ settings.text_level_3_url }}" {% endunless %}
+               style="font-size: {{ settings.text_level_3_font_size }};
+                     line-height: {{ settings.text_level_3_line_height }}">
+            {{ settings.text_level_3_text | newline_to_br }}
+         </a>
+      {% endunless %}
+      {% unless settings.button_text == blank %}
+         <a class="button {% unless settings.button_style == "default" %} {{ settings.button_style }} {% endunless %} overlay-text-block__button"
+            {% unless settings.button_url == blank %} href="{{ settings.button_url }}" {% endunless %} >
+            {{ settings.button_text }}
+         </a>
+      {% endunless %}
+   </div>
+</div>
