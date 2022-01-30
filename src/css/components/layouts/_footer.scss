@@ -1,0 +1,116 @@
+.footer {
+  max-width: 100%;
+  width: 100vw;
+}
+  .footer__top-layer {
+    background-color: $color-footer-secondary;
+    color: $color-text-secondary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: $height-footer-top;
+    height: $height-footer-top;
+    padding: 0 $space*5;
+
+    @include mobile {
+      max-height: $height-footer-top-mobile;
+    }
+  }
+    .footer__button-container { flex: 1 }
+      .footer__back-to-top-button {
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .footer__round-logo-container { flex: 1 }
+      .footer__round-logo {
+        height: 60px;
+        width: 60px;
+
+        @include larger-than-mobile {
+          display: block;
+          margin: 0 auto;
+          height: 90px;
+          width: 90px;
+        }
+      }
+
+    .footer__our-shop { flex: 1; }
+      .footer__our-shop-text {
+        @extend .font-footer-our-shop;
+        color: $color-text-primary;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+        .footer__arrow {
+          width: 50px;
+          height: auto;
+          margin-left: $space*2;
+
+          @include mobile {
+            width: 30px;
+          }
+        }
+
+  .footer__bottom-layer {
+    background-color: $color-footer;
+    color: $color-text-white;
+    padding: 1px 0;
+  }
+    .footer__nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: $space*5 0;
+
+      @include larger-than-mobile {
+        height: 120px;
+      }
+    }
+    .footer__nav--secondary {}
+      .footer__nav-list {
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        margin: 0;
+        flex: 1;
+        padding: 0;
+
+        @include mobile {
+          display: block;
+          text-align: center;
+        }
+
+        .footer__nav--secondary & {
+          max-width: 500px;
+        }
+      }
+        .footer__nav-list-item {
+          &:not(:last-of-type) {
+            margin-bottom: $space*3;
+          }
+        }
+          .footer__nav-list-item-link {
+            @extend .font-footer-list-item-link;
+            color: $color-text-white;
+
+            .footer__nav--secondary & {
+              @extend .font-footer-list-item-link--secondary;
+              color: $color-text-secondary;
+            }
+          }
+
+    .footer__white-logo-container {}
+    .footer__white-logo {
+      width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+
+      @include mobile {
+        width: 200px;
+      }
+    }

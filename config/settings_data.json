@@ -8,36 +8,9 @@
         }
       },
       "footer": {
-        "type": "footer",
-        "blocks": {
-          "footer-0": {
-            "type": "link_list",
-            "settings": {
-            }
-          },
-          "footer-1": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Info"
-            }
-          },
-          "footer-2": {
-            "type": "text",
-            "settings": {
-              "heading": "Our mission"
-            }
-          }
-        },
-        "block_order": [
-          "footer-0",
-          "footer-1",
-          "footer-2"
-        ],
         "settings": {
-          "show_social": true,
-          "enable_country_selector": false,
-          "enable_language_selector": false,
-          "margin_top": 48
+          "footer_menu": "footer",
+          "secondary_menu": "footer-secondary-menu"
         }
       },
       "main-password-header": {
@@ -63,35 +36,9 @@
         },
         "footer": {
           "type": "footer",
-          "blocks": {
-            "footer-0": {
-              "type": "link_list",
-              "settings": {
-              }
-            },
-            "footer-1": {
-              "type": "link_list",
-              "settings": {
-                "heading": "Info"
-              }
-            },
-            "footer-2": {
-              "type": "text",
-              "settings": {
-                "heading": "Our mission"
-              }
-            }
-          },
-          "block_order": [
-            "footer-0",
-            "footer-1",
-            "footer-2"
-          ],
           "settings": {
-            "show_social": true,
-            "enable_country_selector": false,
-            "enable_language_selector": false,
-            "margin_top": 48
+            "footer_menu": "footer",
+            "secondary_menu": "footer-secondary-menu"
           }
         },
         "main-password-header": {

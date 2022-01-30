@@ -6,3 +6,19 @@
  * Default global spacing units
  */
 $space:  8px !default;
+
+/**
+ * Main CSS
+ */
+body {
+  margin: 0;
+  position: relative;
+}
+
+main {
+  margin-top: -$height-header;
+
+  @include mobile {
+    margin-top: -$height-header-mobile;
+  }
+}

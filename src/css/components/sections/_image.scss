@@ -1,0 +1,22 @@
+.image__section {
+  position: relative;
+}
+  .image {
+    position: relative;
+    @include mobile {
+      max-width: var(--max-width-mobile);
+    }
+  }
+    .image__link {}
+      .image__picture {}
+        .image__image {
+          object-fit: cover;
+          width: 100%;
+          height: auto;
+
+          @include mobile {
+            object-position: 80%;
+            width: 100vw;
+            height: 100vh;
+          }
+        }

@@ -1,13 +1,27 @@
-// SETTINGS
-@import "settings/global";
+// BREAKPOINTS
 @import "settings/breakpoints";
-@import "settings/colors";
-@import "settings/sizes";
-@import "settings/fonts";
-@import "settings/typography";
 
 // Functions/Tools
 @import "tools/functions";
 
+// SETTINGS
+@import "settings/colors";
+@import "settings/sizes";
+@import "settings/fonts";
+@import "settings/typography";
+@import "settings/global";
+
+
+
 // COMPONENTS
+@import "components/shared/overlay-text-block";
+@import "components/shared/button";
 @import "components/layouts/header";
+@import "components/layouts/footer";
+@import "components/sections/image";
+@import "components/sections/featured-collection";
+@import "components/sections/news-cards";
+
+
+// OVERRIDES - Placed always in the bottom - Meant to override styles
+@import "overrides/hide";

@@ -1,2 +1,13 @@
+:root {
+  --top-space-desktop: 0px;
+  --top-space-mobile: 0px;
+  --max-width-desktop: 100vw;
+  --max-width-mobile: 100vw;
+}
+
 $space: 8px;
-$height-header: 120px;
+$height-header: 110px;
+$height-header-mobile: 80px;
+
+$height-footer-top: 150px;
+$height-footer-top-mobile: 110px;

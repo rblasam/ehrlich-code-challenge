@@ -1,0 +1,46 @@
+.news-cards {
+  padding: $space*3
+}
+  .news-cards__title {
+    text-align: center;
+  }
+  .news-cards__description {
+    text-align: center;
+  }
+  .news-cards__grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+    .news-cards__grid-item {
+      flex: 0 0 30%;
+      border-radius: 100px;
+
+      @include mobile {
+        flex: 0 0 90%;
+      }
+    }
+    .news-cards__card-image {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    .new-cards__picture {
+    }
+    .news-cards__image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .news-cards__card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $color-text-white;
+      width: 100%;
+      text-align: center;
+    }
