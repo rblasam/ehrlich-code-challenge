@@ -13,6 +13,8 @@
   font-family: $font-sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 11px;
 }
 
 .font-button-wireframe {
@@ -22,6 +24,10 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   text-decoration: none;
+}
+.font-button-wireframe-style2 {
+  @extend .font-button-wireframe;
+  font-weight: 400;
 }
 
 // Overlay Text
@@ -40,6 +46,39 @@
   color: $color-text-secondary;
 }
 
+// Featured Collection Section
+.font-featured-collection-title {
+  font-family: $font-sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+.font-product-preview-title {
+  font-family: $font-sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.font-product-preview-size {
+  font-family: $font-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+.font-product-preview-description {
+  font-family: $font-sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+.font-product-preview-price {
+  font-family: $font-sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.font-product-title {
+  font-family: $font-sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
 // FOOTER
 .font-footer-our-shop {
   font-family: $font-sans-serif;
@@ -50,4 +89,15 @@
   @include mobile {
     font-size: 24px;
   }
+}
+
+.font-footer-list-item-link {
+  font-family: $font-sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.font-footer-list-item-link--secondary {
+  font-size: 12px;
 }

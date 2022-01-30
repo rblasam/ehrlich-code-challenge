@@ -1,3 +1,14 @@
+{% comment %}
+    Renders a product card
+
+    Accepts:
+    - position: {String} Position of section (Value has two properties. It Should be split with comma "," delimeter. First value is for "justify-content", second is for "align-items" ) (optional)
+    - show: {String} Defines on what screen size the section will be shown (optional)
+
+    Usage:
+    {% render 'overlay-text-block', settings: section.settings %}
+{% endcomment %}
+
 {% assign flex = settings.position | split: "," %}
 
 {% assign hide_css = "" %}

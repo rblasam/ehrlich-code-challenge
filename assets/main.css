@@ -21,15 +21,20 @@
 .font-button, .button {
   font-family: "Century Gothic", sans-serif;
   font-weight: 400;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 11px; }
 
-.font-button-wireframe, .button-wireframe {
+.font-button-wireframe, .font-button-wireframe-style2, .button-wireframe--style2, .button-wireframe {
   font-family: "Century Gothic", sans-serif;
   font-weight: 300;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   text-decoration: none; }
+
+.font-button-wireframe-style2, .button-wireframe--style2 {
+  font-weight: 400; }
 
 .font-overlay-text-style1, .overlay-text-block__text--style1 {
   font-family: "Cormorant Garamond", serif;
@@ -43,6 +48,37 @@
   font-style: normal;
   color: #b4a89a; }
 
+.font-featured-collection-title, .featured-collection__title {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 28px;
+  font-weight: 700; }
+
+.font-product-preview-title, .featured-collection__product-preview-title {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400; }
+
+.font-product-preview-size, .featured-collection__product-preview-size {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12px;
+  font-weight: 700; }
+
+.font-product-preview-description, .featured-collection__product-preview-description {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 12px;
+  font-weight: 300; }
+
+.font-product-preview-price, .featured-collection__product-preview-price {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400; }
+
+.font-product-title, .featured-collection__product-title {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5; }
+
 .font-footer-our-shop, .footer__our-shop-text {
   font-family: "Century Gothic", sans-serif;
   font-weight: 700;
@@ -51,6 +87,15 @@
   @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
     .font-footer-our-shop, .footer__our-shop-text {
       font-size: 24px; } }
+
+.font-footer-list-item-link, .footer__nav-list-item-link {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none; }
+
+.font-footer-list-item-link--secondary, .footer__nav--secondary .footer__nav-list-item-link {
+  font-size: 12px; }
 
 /*------------------------------------*\
     #GLOBAL
@@ -94,7 +139,8 @@ main {
   color: #ffffff;
   border-radius: 5px;
   background-color: #f6914d;
-  padding: 12px 64px; }
+  padding: 12px 64px;
+  text-transform: uppercase; }
 
 .button--style1 {
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
@@ -111,6 +157,9 @@ main {
   border: 1px solid #b4a89a;
   color: #b4a89a;
   padding: 8px 32px; }
+
+.button-wireframe--style2 {
+  color: #443636; }
 
 .header__section {
   position: sticky;
@@ -226,21 +275,25 @@ main {
 
 .footer__bottom-layer {
   background-color: #3d552c;
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 1px 0; }
 
 .footer__nav {
-  height: 120px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 40px 0; }
+  @media screen and (min-width: 960px) and (orientation: landscape), screen and (min-width: 1200px), print {
+    .footer__nav {
+      height: 120px; } }
 
 .footer__nav-list {
   display: flex;
   list-style: none;
   justify-content: space-evenly;
-  align-items: center;
   margin: 0;
-  flex: 1; }
+  flex: 1;
+  padding: 0; }
   @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
     .footer__nav-list {
       display: block;
@@ -248,21 +301,22 @@ main {
   .footer__nav--secondary .footer__nav-list {
     max-width: 500px; }
 
+.footer__nav-list-item:not(:last-of-type) {
+  margin-bottom: 24px; }
+
 .footer__nav-list-item-link {
-  font-family: "Century Gothic", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  text-decoration: none;
   color: #ffffff; }
   .footer__nav--secondary .footer__nav-list-item-link {
-    color: #b4a89a;
-    font-size: 14px; }
+    color: #b4a89a; }
 
 .footer__white-logo {
   width: 300px;
   height: auto;
   display: block;
   margin: 0 auto; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    .footer__white-logo {
+      width: 200px; } }
 
 .image__section {
   position: relative; }
@@ -282,6 +336,125 @@ main {
       object-position: 80%;
       width: 100vw;
       height: 100vh; } }
+
+.featured-collection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 0; }
+
+.featured-collection__title {
+  text-align: center; }
+
+.featured-collection__radio {
+  display: none; }
+
+.featured-collection__product-preview {
+  display: none;
+  justify-content: center;
+  margin: 56px auto;
+  max-width: 650px;
+  position: relative; }
+
+.featured-collection__product-preview-image-container {
+  flex: 0 0 50%; }
+
+.featured-collection__product-preview-picture {
+  width: 100%;
+  height: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.featured-collection__product-preview-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.featured-collection__product-preview-details-container {
+  flex: 0 0 50%;
+  display: flex; }
+
+.featured-collection__product-preview-details {
+  border-radius: 20px;
+  border: thin solid #b4a89a;
+  padding: 28px; }
+
+.featured-collection__grid {
+  display: flex;
+  justify-content: center; }
+
+.featured-collection__grid-item {
+  flex: 0 0 12%; }
+  .featured-collection__grid-item:not(:last-of-type) {
+    margin-right: 16px; }
+
+.featured-collection__product-image-container {
+  background-color: #ffffff;
+  border: thin solid lightgray;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden; }
+
+.featured-collection__product-picture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.featured-collection__product-image {
+  width: 60%;
+  height: auto; }
+
+.featured-collection__product-title {
+  text-align: center;
+  color: #b4a89a; }
+
+.featured-collection__view-all-button-container {
+  text-align: center;
+  margin-top: 32px; }
+
+.featured-collection__radio--preview-0:checked ~ .featured-collection__product-preview--0 {
+  display: flex; }
+
+.featured-collection__radio--preview-1:checked ~ .featured-collection__product-preview--1 {
+  display: flex; }
+
+.featured-collection__radio--preview-2:checked ~ .featured-collection__product-preview--2 {
+  display: flex; }
+
+.featured-collection__radio--preview-3:checked ~ .featured-collection__product-preview--3 {
+  display: flex; }
+
+.featured-collection__radio--preview-4:checked ~ .featured-collection__product-preview--4 {
+  display: flex; }
+
+.featured-collection__radio--preview-5:checked ~ .featured-collection__product-preview--5 {
+  display: flex; }
+
+.featured-collection__radio--preview-6:checked ~ .featured-collection__product-preview--6 {
+  display: flex; }
+
+.featured-collection__radio--preview-7:checked ~ .featured-collection__product-preview--7 {
+  display: flex; }
+
+.featured-collection__radio--preview-8:checked ~ .featured-collection__product-preview--8 {
+  display: flex; }
+
+.featured-collection__radio--preview-9:checked ~ .featured-collection__product-preview--9 {
+  display: flex; }
+
+.featured-collection__radio--preview-10:checked ~ .featured-collection__product-preview--10 {
+  display: flex; }
 
 .hide {
   display: none; }
