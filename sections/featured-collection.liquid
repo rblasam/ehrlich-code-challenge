@@ -10,15 +10,17 @@
 
   {% assign preview_html = "" %}
   {% assign collection_html = "" %}
+  {% assign mobile_preview_html = "" %}
   {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
     <input type="radio" id="{{- product.handle -}}"
            name="featured-collection-radio"
            class="featured-collection__radio featured-collection__radio--preview-{{- forloop.index0 -}}"
             {% if forloop.index0 == 0 %} checked {% endif %}>
+
     {% if section.settings.show_preview %}
       {% capture preview_html %}
         {{ preview_html }}
-        <div class="featured-collection__product-preview featured-collection__product-preview--{{- forloop.index0 -}}">
+        <div class="featured-collection__product-preview featured-collection__product-preview--{{forloop.index0}}">
           <div class="featured-collection__product-preview-image-container">
             <picture class="featured-collection__product-preview-picture">
               <source media="(max-width: 900px)"
@@ -50,10 +52,27 @@
                   {{ product.featured_image | img_url: 'master' }} 4400w" />
             </picture>
           </div>
+
           <div class="featured-collection__product-preview-details-container">
             <div class="featured-collection__product-preview-details">
               <p class="featured-collection__product-preview-title">{{ product.title }}</p>
-              <p class="featured-collection__product-preview-size">{{ product.size }}</p>
+              <p class="featured-collection__product-preview-size">{{ product.variants.first.title }}</p>
+              <p class="featured-collection__product-preview-description">{{ product.description }}</p>
+              <p class="featured-collection__product-preview-price">{{ product.price | money }}</p>
+
+              <a class="button button-wireframe button-wireframe--style2 featured-collection__product-preview-view">View</a>
+            </div>
+          </div>
+        </div>
+      {% endcapture %}
+
+      {% capture mobile_preview_html %}
+        {{ mobile_preview_html }}
+        <div class="featured-collection__product-preview featured-collection__product-preview--{{forloop.index0}}-mobile">
+          <div class="featured-collection__product-preview-details-container">
+            <div class="featured-collection__product-preview-details">
+              <p class="featured-collection__product-preview-title">{{ product.title }}</p>
+              <p class="featured-collection__product-preview-size">{{ product.variants.first.title }}</p>
               <p class="featured-collection__product-preview-description">{{ product.description }}</p>
               <p class="featured-collection__product-preview-price">{{ product.price | money }}</p>
 
@@ -112,6 +131,8 @@
   <div class="featured-collection__grid">
     {{ collection_html }}
   </div>
+
+  {{ mobile_preview_html }}
 
   {% if section.settings.show_view_all %}
     <div class="featured-collection__view-all-button-container">

@@ -32,4 +32,5 @@
   .button-wireframe--style2 {
     @extend .font-button-wireframe-style2;
     color: $color-text-primary;
+    text-align: center;
   }
