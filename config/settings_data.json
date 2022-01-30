@@ -4,35 +4,34 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo_width": 90
-        }
-      },
-      "footer": {
-        "settings": {
-          "footer_menu": "footer",
-          "secondary_menu": "footer-secondary-menu"
+          "main_menu": "main-menu",
+          "secondary_menu": "secondary-menu"
         }
       },
       "main-password-header": {
         "type": "main-password-header",
-        "settings": {
-        }
+        "settings": {}
       },
       "main-password-footer": {
         "type": "main-password-footer",
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
         "settings": {
+          "footer_menu": "footer",
+          "secondary_menu": "footer-secondary-menu"
         }
       }
-    }
+    },
+    "content_for_index": []
   },
   "presets": {
     "Default": {
       "sections": {
         "header": {
           "type": "header",
-          "settings": {
-            "logo_width": 90
-          }
+          "settings": {}
         },
         "footer": {
           "type": "footer",
@@ -43,13 +42,11 @@
         },
         "main-password-header": {
           "type": "main-password-header",
-          "settings": {
-          }
+          "settings": {}
         },
         "main-password-footer": {
           "type": "main-password-footer",
-          "settings": {
-          }
+          "settings": {}
         }
       }
     }

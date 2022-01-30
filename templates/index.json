@@ -1,10 +1,180 @@
 {
   "sections": {
     "image": {
-      "type": "image"
+      "type": "image",
+      "blocks": {
+        "dad06c47-58dd-4b4e-8e08-c7d221f452c1": {
+          "type": "overlay-text",
+          "settings": {
+            "title": "Overlay Text",
+            "show": "desktop",
+            "text_level_1_text": "Pure All Natural\nCBD Inspired by the\nIslands of Hawaii",
+            "text_level_1_font_size": "50px",
+            "text_level_1_line_height": 1,
+            "text_level_1_style": "overlay-text-block__text--style1",
+            "text_level_1_margin-top": 0,
+            "text_level_1_margin-bottom": 0,
+            "text_level_1_url": "",
+            "text_level_2_text": "ZERO THC - all natural cannabidoil",
+            "text_level_2_font_size": "19px",
+            "text_level_2_line_height": 4,
+            "text_level_2_style": "overlay-text-block__text--style2",
+            "text_level_2_margin-top": 0,
+            "text_level_2_margin-bottom": 0,
+            "text_level_2_url": "",
+            "text_level_3_text": "",
+            "text_level_3_font_size": "12px",
+            "text_level_3_line_height": 1,
+            "text_level_3_style": "default",
+            "text_level_3_margin-top": 0,
+            "text_level_3_margin-bottom": 0,
+            "text_level_3_url": "",
+            "button_text": "Shop Now",
+            "button_font_size": "10px",
+            "button_style": "button--style1",
+            "button_margin-top": 0,
+            "button_margin-bottom": 0,
+            "button_url": "",
+            "box_text_align": "left",
+            "position": "flex-start,center",
+            "box_margin-top": 0,
+            "box_margin-bottom": 19,
+            "box_margin-left": 5,
+            "box_margin-right": 0,
+            "box_padding-vertical": 0,
+            "box_padding-horizontal": 0
+          }
+        }
+      },
+      "block_order": [
+        "dad06c47-58dd-4b4e-8e08-c7d221f452c1"
+      ],
+      "settings": {
+        "title": "Image Banner",
+        "show": "desktop",
+        "desktop-image": "shopify:\/\/shop_images\/homepage-bg.png",
+        "mobile-image": "shopify:\/\/shop_images\/homepage-bg.png",
+        "link": "",
+        "max_width_desktop": 100,
+        "max_width_mobile": 100,
+        "top_space_desktop": 0,
+        "top_space_mobile": 0
+      }
+    },
+    "16435126563e8cf13b": {
+      "type": "news-cards",
+      "blocks": {
+        "3a35927c-64e7-4181-b5b4-28d1a004bfe7": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image1.png",
+            "content": "Quiet your mind and calm the storm."
+          }
+        },
+        "1454a101-0419-4993-857d-78879bbb352d": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image2.png",
+            "content": "Ease your pain and soothe your joints."
+          }
+        },
+        "5b7b0618-9898-4fd2-bc38-906d8e202a8e": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image3.png",
+            "content": "Sleep tight and wake up refreshed."
+          }
+        }
+      },
+      "block_order": [
+        "3a35927c-64e7-4181-b5b4-28d1a004bfe7",
+        "1454a101-0419-4993-857d-78879bbb352d",
+        "5b7b0618-9898-4fd2-bc38-906d8e202a8e"
+      ],
+      "settings": {
+        "title": "Verma's Benefits",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus auctor arcu, nec molllis tortor.",
+        "show": "both"
+      }
+    },
+    "16434597579f402a44": {
+      "type": "image",
+      "blocks": {
+        "5d8b5faf-ae49-4514-8ca2-a79463bf6157": {
+          "type": "overlay-text",
+          "settings": {
+            "title": "",
+            "show": "mobile",
+            "text_level_1_text": "Pure All Natural\nCBD Inspired by the\nIslands of Hawaii",
+            "text_level_1_font_size": "32px",
+            "text_level_1_line_height": 1,
+            "text_level_1_style": "overlay-text-block__text--style1",
+            "text_level_1_margin-top": 0,
+            "text_level_1_margin-bottom": 0,
+            "text_level_1_url": "",
+            "text_level_2_text": "ZERO THC - all natural cannabidoil",
+            "text_level_2_font_size": "16px",
+            "text_level_2_line_height": 3.7,
+            "text_level_2_style": "overlay-text-block__text--style2",
+            "text_level_2_margin-top": 0,
+            "text_level_2_margin-bottom": 0,
+            "text_level_2_url": "",
+            "text_level_3_text": "",
+            "text_level_3_font_size": "10px",
+            "text_level_3_line_height": 1,
+            "text_level_3_style": "overlay-text-block__text--style1",
+            "text_level_3_margin-top": 0,
+            "text_level_3_margin-bottom": 0,
+            "text_level_3_url": "",
+            "button_text": "Shop Now",
+            "button_font_size": "10px",
+            "button_style": "button--style1",
+            "button_margin-top": 0,
+            "button_margin-bottom": 0,
+            "button_url": "",
+            "box_text_align": "center",
+            "position": "center,flex-end",
+            "box_margin-top": 0,
+            "box_margin-bottom": 24.5,
+            "box_margin-left": 0,
+            "box_margin-right": 0,
+            "box_padding-vertical": 0,
+            "box_padding-horizontal": 0
+          }
+        }
+      },
+      "block_order": [
+        "5d8b5faf-ae49-4514-8ca2-a79463bf6157"
+      ],
+      "settings": {
+        "title": "Image Mobile",
+        "show": "mobile",
+        "desktop-image": "shopify:\/\/shop_images\/homepage-bg.png",
+        "mobile-image": "shopify:\/\/shop_images\/homepage-bg.png",
+        "link": "",
+        "max_width_desktop": 100,
+        "max_width_mobile": 100,
+        "top_space_desktop": 0,
+        "top_space_mobile": 0
+      }
+    },
+    "1643501439c7aef823": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Our Products",
+        "collection": "cbd-gummies",
+        "products_to_show": 8,
+        "show": "both",
+        "background_color": "#fcf4ee",
+        "show_view_all": true,
+        "show_preview": true
+      }
     }
   },
   "order": [
-    "image"
+    "image",
+    "16435126563e8cf13b",
+    "16434597579f402a44",
+    "1643501439c7aef823"
   ]
 }
