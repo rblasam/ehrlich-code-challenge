@@ -562,6 +562,48 @@ main {
   .featured-collection__radio--preview-10:checked ~ .featured-collection__product-preview--10-mobile {
     display: flex; } }
 
+.news-cards {
+  padding: 24px; }
+
+.news-cards__title {
+  text-align: center; }
+
+.news-cards__description {
+  text-align: center; }
+
+.news-cards__grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    .news-cards__grid {
+      justify-content: center; } }
+
+.news-cards__grid-item {
+  flex: 0 0 30%;
+  border-radius: 100px; }
+  @media screen and (max-width: 960px), screen and (max-width: 1200px) and (orientation: portrait), print {
+    .news-cards__grid-item {
+      flex: 0 0 90%; } }
+
+.news-cards__card-image {
+  height: 100%;
+  width: 100%;
+  position: relative; }
+
+.news-cards__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; }
+
+.news-cards__card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center; }
+
 .hide {
   display: none; }
 

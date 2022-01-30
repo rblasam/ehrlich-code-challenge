@@ -1,0 +1,118 @@
+<div class="news-cards" style="background-color: {{ section.settings.background_color }}">
+   <h1 class="news-cards__title">{{ section.settings.title }}</h1>
+   <p class="news-cards__description">{{ section.settings.description }}</p>
+
+   <div class="news-cards__grid">
+      {% for block in section.blocks %}
+         {% if block.type == "card" %}
+            <div class="news-cards__grid-item">
+               <div class="news-cards__card-image">
+                  <picture class="new-cards__picture">
+                     <source media="(max-width: 900px)"
+                             width="{{ block.settings.image.width }}"
+                             height="{{ block.settings.image.height }}"
+                             srcset="{{ block.settings.image | img_url: '600x600' }} 400w,
+                                     {{ block.settings.image | img_url: '800x800' }} 600w,
+                                     {{ block.settings.image | img_url: '1200x1200' }} 800w,
+                                     {{ block.settings.image | img_url: '1400x1400' }} 1000w,
+                                     {{ block.settings.image | img_url: '1600x1600' }} 1200w,
+                                     {{ block.settings.image | img_url: '1800x1800' }} 1400w,
+                                     {{ block.settings.image | img_url: '2000x2000' }} 1600w" />
+
+                     <img class="news-cards__image"
+                          alt="Image Alt"
+                          width="{{ block.settings.image.width }}"
+                          height="{{ block.settings.image.height }}"
+                          src="{{ block.settings.image | img_url: 'master' }}"
+                          srcset="{{ block.settings.image | img_url: '1600x1600' }} 1800w,
+                                 {{ block.settings.image | img_url: '1800x1800' }} 2000w,
+                                 {{ block.settings.image | img_url: '2000x2000' }} 2200w,
+                                 {{ block.settings.image | img_url: '2200x2200' }} 2400w,
+                                 {{ block.settings.image | img_url: '2400x2400' }} 2600w,
+                                 {{ block.settings.image | img_url: '2600x2600' }} 2800w,
+                                 {{ block.settings.image | img_url: '2800x2800' }} 3000w,
+                                 {{ block.settings.image | img_url: '3000x3000' }} 3200w,
+                                 {{ block.settings.image | img_url: '3200x3200' }} 3600w,
+                                 {{ block.settings.image | img_url: '3600x3600' }} 4000w,
+                                 {{ block.settings.image | img_url: 'master' }} 4400w" />
+                  </picture>
+
+                  <div class="news-cards__card-content">
+                     <p>{{ block.settings.content }}</p>
+                  </div>
+               </div>
+
+            </div>
+         {% endif %}
+      {% endfor %}
+   </div>
+</div>
+
+{% schema %}
+{
+   "name": "News Cards",
+   "class": "news-cards__section",
+   "settings": [
+      {
+         "type":"text",
+         "id":"title",
+         "label":"Section Heading",
+         "default": "Verma's Benefits"
+      },
+      {
+         "type":"textarea",
+         "id":"description",
+         "label":"Section Heading",
+         "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus auctor arcu, nec molllis tortor."
+      },
+      {
+         "type":"select",
+         "id":"show",
+         "label":"Show",
+         "options":[
+            {
+               "value":"both",
+               "label":"All"
+            },
+            {
+               "value":"desktop",
+               "label":"Desktop"
+            },
+            {
+               "value":"mobile",
+               "label":"Mobile"
+            }
+         ]
+      },
+      {
+         "type":"color",
+         "id":"background_color",
+         "label":"Backround Color",
+         "default":"#fcf4ee"
+      }
+   ],
+   "blocks": [
+      {
+         "type": "card",
+         "name": "card",
+         "settings": [
+            {
+               "type": "image_picker",
+               "id": "image",
+               "label": "Image"
+            },
+            {
+               "type": "textarea",
+               "id": "content",
+               "label": "Content"
+            }
+         ]
+      }
+   ],
+   "presets": [
+      {
+         "name": "News Card"
+      }
+   ]
+}
+{% endschema %}
